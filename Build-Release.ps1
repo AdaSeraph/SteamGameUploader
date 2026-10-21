@@ -40,6 +40,7 @@ if ($Package) {
     Copy-Item -LiteralPath $files -Destination $staging
     Compress-Archive -Path (Join-Path $staging '*') -DestinationPath $zip
     $hash = (Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant()
-    Set-Content -LiteralPath "$zip.sha256" -Value "$hash  $name.zip" -Encoding Ascii
+    # LF line ending so `sha256sum -c` also works on Linux and macOS.
+    [System.IO.File]::WriteAllText("$zip.sha256", "$hash  $name.zip`n", [System.Text.Encoding]::ASCII)
     Write-Host "Package: $zip" -ForegroundColor Green
 }
