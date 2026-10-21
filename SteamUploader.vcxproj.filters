@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source"><UniqueIdentifier>{571A6AE5-F930-4F60-8129-A8D09C06F962}</UniqueIdentifier></Filter>
+    <Filter Include="Headers"><UniqueIdentifier>{9C9E0B8A-F2FA-4823-B584-B9BEFF01DDA1}</UniqueIdentifier></Filter>
+    <Filter Include="Resources"><UniqueIdentifier>{3869A392-4147-49FC-AC31-51D3B3CE1663}</UniqueIdentifier></Filter>
+  </ItemGroup>
+  <ItemGroup><ClCompile Include="src\main.cpp"><Filter>Source</Filter></ClCompile><ClCompile Include="src\AppModel.cpp"><Filter>Source</Filter></ClCompile><ClCompile Include="src\I18n.cpp"><Filter>Source</Filter></ClCompile></ItemGroup>
+  <ItemGroup><ClInclude Include="src\AppModel.h"><Filter>Headers</Filter></ClInclude><ClInclude Include="src\I18n.h"><Filter>Headers</Filter></ClInclude><ClInclude Include="src\resource.h"><Filter>Headers</Filter></ClInclude></ItemGroup>
+  <ItemGroup><Manifest Include="src\SteamUploader.manifest"><Filter>Resources</Filter></Manifest></ItemGroup>
+</Project>
